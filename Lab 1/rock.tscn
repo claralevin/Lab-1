@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://d4ejxfmv6nf2x"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ingcv"]
+albedo_color = Color(0.329412, 0.352941, 0.329412, 1)
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0185606, -0.0344933, 0.0316119)
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="."]
+transform = Transform3D(2.15665, 0, 0, 0, 1.297, 0, 0, 0, 1.16794, -0.740206, -0.479456, 0.702842)
+polygon = PackedVector2Array(0.0523765, 0.500259, 0.420095, 0.977792, 0.800536, 0.756103, 0.426706, 0.348182)
+material = SubResource("StandardMaterial3D_ingcv")

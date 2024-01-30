@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfudcehgfioa1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0mpju"]
+albedo_color = Color(0.262745, 0.243137, 0.235294, 1)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+transform = Transform3D(0.333208, 0, 0, 0, 0.132115, 0, 0, 0, 0.382322, 0, 0, 0)
+material = SubResource("StandardMaterial3D_0mpju")
