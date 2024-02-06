@@ -1,0 +1,225 @@
+[gd_scene load_steps=18 format=3 uid="uid://bxg153emask8s"]
+
+[ext_resource type="PackedScene" uid="uid://d4ejxfmv6nf2x" path="res://rock.tscn" id="1_di7tb"]
+[ext_resource type="Script" path="res://.godot/editor/box 4.gd" id="2_4xf8y"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_thsx4"]
+sky_top_color = Color(0.717647, 0.47451, 0.631373, 1)
+sky_horizon_color = Color(0.857843, 0.786275, 0.760784, 1)
+sky_energy_multiplier = 1.1
+ground_bottom_color = Color(0.713726, 0.670588, 0.411765, 1)
+ground_horizon_color = Color(0.857843, 0.786275, 0.760784, 1)
+
+[sub_resource type="Sky" id="Sky_qvvts"]
+sky_material = SubResource("ProceduralSkyMaterial_thsx4")
+
+[sub_resource type="Environment" id="Environment_o7n0w"]
+background_mode = 2
+sky = SubResource("Sky_qvvts")
+tonemap_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1b42b"]
+albedo_color = Color(0.313726, 0.203922, 0.113725, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vo7e8"]
+albedo_color = Color(0.0862745, 0.239216, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xpqhe"]
+albedo_color = Color(0.0862745, 0.439216, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e0jhp"]
+albedo_color = Color(0.14902, 0.27451, 0.105882, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_72eph"]
+albedo_color = Color(0.14902, 0.152941, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4shh2"]
+albedo_color = Color(0.188235, 0.133333, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tro04"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_25pm4"]
+albedo_color = Color(0.0862745, 0.439216, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c1k2q"]
+albedo_color = Color(1, 0.509804, 0.988235, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3exjj"]
+albedo_color = Color(0.0627451, 0.231373, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k2qt5"]
+albedo_color = Color(1, 0.639216, 0.054902, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iq632"]
+albedo_color = Color(0.843137, 0.392157, 0.247059, 1)
+
+[node name="island" type="Node3D"]
+transform = Transform3D(0.922289, 0, 0.386502, 0, 1, 0, -0.386502, 0, 0.922289, 0, 3.15649, 0)
+
+[node name="light" type="Node" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="light"]
+transform = Transform3D(-0.00170142, 0.0123545, -0.999922, 0.192766, 0.981174, 0.0117948, 0.981243, -0.192731, -0.00405092, 0, 3.15649, 0)
+light_color = Color(1, 0.8, 0.639216, 1)
+light_energy = 11.99
+light_volumetric_fog_energy = 5.283
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_o7n0w")
+
+[node name="rocks1" type="Node" parent="."]
+
+[node name="rock" parent="rocks1" instance=ExtResource("1_di7tb")]
+transform = Transform3D(-0.275349, -0.0358361, -0.0195602, -0.044691, 0.219673, -0.00558992, 0.0231236, -0.00216229, -0.24372, -0.647173, 4.27975, 0.518969)
+
+[node name="rock2" parent="rocks1" instance=ExtResource("1_di7tb")]
+transform = Transform3D(-0.0311234, 0, -0.243051, 0, 0.222588, 0, 0.278173, 0, -0.0271938, 0.0311509, 4.24708, 0.210205)
+
+[node name="rock3" parent="rocks1" instance=ExtResource("1_di7tb")]
+transform = Transform3D(0.012569, 0.00501476, -0.244258, -0.0140907, 0.22226, 0.00495525, 0.279271, 0.0109885, 0.0112432, -0.580293, 4.296, 0.626392)
+
+[node name="rock4" parent="rocks1" instance=ExtResource("1_di7tb")]
+transform = Transform3D(-0.251228, 0.0973586, 0.0136582, 0.123396, 0.198726, 0.0226332, -0.00262597, 0.0239684, -0.243134, 0.284735, 4.20022, 0.40238)
+
+[node name="rock5" parent="rocks1" instance=ExtResource("1_di7tb")]
+transform = Transform3D(-0.154265, 0.113138, -0.161841, 0.176867, 0.171878, 0.0163519, 0.152542, -0.0848705, -0.182629, 0.471263, 4.20022, 0.709246)
+
+[node name="rock6" parent="rocks1" instance=ExtResource("1_di7tb")]
+transform = Transform3D(-0.101686, 0.0147108, 0.787081, -0.108471, 0.337578, -0.0552726, -0.631319, -0.0603711, -0.117278, -0.193325, 4.26457, 0.903175)
+
+[node name="rock7" parent="rocks1" instance=ExtResource("1_di7tb")]
+transform = Transform3D(-0.380332, -0.0756291, 0.621783, -0.176784, 0.329468, 0.0528619, -0.494737, -0.0595881, -0.496887, 0.190798, 4.16406, -0.506407)
+
+[node name="rock8" parent="rocks1" instance=ExtResource("1_di7tb")]
+transform = Transform3D(-0.187196, -0.110523, -0.165149, -0.0841065, 0.211955, -0.0913712, 0.314982, -0.00908859, -0.122547, 0.0544918, 4.2402, -0.268357)
+
+[node name="trunk" type="Node" parent="."]
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="trunk"]
+transform = Transform3D(0.379963, 0, 0, 0, 1, 0, 0, 0, 0.297652, 2.1963, 5.36037, 0)
+radius = 0.544001
+material = SubResource("StandardMaterial3D_1b42b")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="trunk"]
+transform = Transform3D(0.132929, -0.232627, -0.236504, -0.312555, -3.92878e-08, -0.107806, 0.0356183, 0.868174, -0.063371, 2.09513, 5.75337, 0.309932)
+radius = 0.399412
+height = 0.824442
+material = SubResource("StandardMaterial3D_1b42b")
+
+[node name="CSGCylinder3D5" type="CSGCylinder3D" parent="trunk"]
+transform = Transform3D(0.132929, -0.232627, -0.236504, -0.312555, -3.92878e-08, -0.107806, 0.0356183, 0.868174, -0.063371, 2.09513, 6.1934, -0.521158)
+radius = 0.399412
+height = 0.824442
+material = SubResource("StandardMaterial3D_1b42b")
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="trunk"]
+transform = Transform3D(0.137619, -1.02101e-08, -0.244847, 3.58563e-08, -0.61585, -6.64736e-09, -0.312555, -5.97293e-08, -0.107806, 1.97353, 5.9019, 0.680382)
+radius = 0.285422
+height = 0.830423
+material = SubResource("StandardMaterial3D_1b42b")
+
+[node name="CSGCylinder3D6" type="CSGCylinder3D" parent="trunk"]
+transform = Transform3D(0.137619, -1.02101e-08, -0.244847, 3.58563e-08, -0.61585, -6.64736e-09, -0.312555, -5.97293e-08, -0.107806, 2.14445, 6.34757, -0.810717)
+radius = 0.285422
+height = 0.830423
+material = SubResource("StandardMaterial3D_1b42b")
+
+[node name="CSGCylinder3D4" type="CSGCylinder3D" parent="trunk"]
+transform = Transform3D(0.12589, 0.248779, -0.22398, 0.312555, 8.92418e-08, 0.107806, 0.0555925, -0.563365, -0.0989083, 1.86777, 6.08619, 0.853711)
+radius = 0.228021
+height = 0.830423
+material = SubResource("StandardMaterial3D_1b42b")
+
+[node name="leaves" type="Node" parent="."]
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="leaves"]
+transform = Transform3D(1.06592, 0, 0.643109, 0, 1.14509, 0, -0.412075, 0, 1.66354, 2.32468, 6.89007, -0.790602)
+radius = 0.46057
+material = SubResource("StandardMaterial3D_vo7e8")
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="leaves"]
+transform = Transform3D(1.06592, 0, 0.643109, 0, 0.8748, 0, -0.412075, 0, 1.66354, 2.32468, 6.54631, 0.195319)
+radius = 0.46057
+material = SubResource("StandardMaterial3D_vo7e8")
+
+[node name="CSGSphere3D4" type="CSGSphere3D" parent="leaves"]
+transform = Transform3D(1.05306, 0, 0.438178, 0, 0.589279, 0, -0.345476, 0, 1.33563, 2.32468, 6.33266, -1.17934)
+radius = 0.46057
+material = SubResource("StandardMaterial3D_vo7e8")
+
+[node name="CSGSphere3D5" type="CSGSphere3D" parent="leaves"]
+transform = Transform3D(0.650638, 0, 0.428895, 0, 0.443458, 0, -0.213454, 0, 1.30734, 1.88413, 6.53822, 0.702119)
+radius = 0.46057
+material = SubResource("StandardMaterial3D_vo7e8")
+
+[node name="CSGSphere3D3" type="CSGSphere3D" parent="leaves"]
+transform = Transform3D(0.440914, 0, -0.156492, 0, 0.54495, 0, 0.0601626, 0, 1.14688, 1.78784, 6.21683, 1.16885)
+radius = 0.46057
+material = SubResource("StandardMaterial3D_vo7e8")
+
+[node name="ground" type="Node" parent="."]
+
+[node name="TOP FLOOR" type="CSGBox3D" parent="ground"]
+transform = Transform3D(4.61144, 0, 1.93251, 0, 5, 0, -1.93251, 0, 4.61144, 0.196326, 4.11248, -0.0666225)
+size = Vector3(1.21471, 0.1, 1.20465)
+material = SubResource("StandardMaterial3D_xpqhe")
+
+[node name="floor2" type="CSGBox3D" parent="ground"]
+transform = Transform3D(4.61144, 0, 1.93251, 0, 5, 0, -1.93251, 0, 4.61144, 0.214142, 3.65142, -0.0881516)
+size = Vector3(0.986275, 0.1, 1.15002)
+material = SubResource("StandardMaterial3D_e0jhp")
+
+[node name="floor3" type="CSGBox3D" parent="ground"]
+transform = Transform3D(4.61144, 0, 1.93251, 0, 5, 0, -1.93251, 0, 4.61144, 0.163601, 3.15649, 0.0935097)
+size = Vector3(0.594727, 0.1, 1)
+material = SubResource("StandardMaterial3D_72eph")
+
+[node name="floor4" type="CSGBox3D" parent="ground"]
+transform = Transform3D(4.61144, 0, 1.93251, 0, 5, 0, -1.93251, 0, 4.61144, 0.185797, 2.69886, 0.00841361)
+size = Vector3(0.436523, 0.1, 0.895691)
+material = SubResource("StandardMaterial3D_4shh2")
+
+[node name="floor5" type="CSGBox3D" parent="ground"]
+transform = Transform3D(4.61144, 0, 1.93251, 0, 5, 0, -1.93251, 0, 4.61144, 0.319718, 2.20764, -0.362831)
+size = Vector3(0.223389, 0.0894531, 0.700562)
+material = SubResource("StandardMaterial3D_tro04")
+
+[node name="bush" type="CSGSphere3D" parent="."]
+transform = Transform3D(1.45236, -0.0298166, 0.00414062, 0.0692865, 0.620946, -0.17312, 0.00395417, 0.0711498, 1.51261, 1.70077, 1.20844, 1.91039)
+radius = 0.623336
+material = SubResource("StandardMaterial3D_25pm4")
+
+[node name="bush 2" type="CSGSphere3D" parent="."]
+transform = Transform3D(1.45236, -0.0298166, 0.00414062, 0.0692865, 0.620946, -0.17312, 0.00395417, 0.0711498, 1.51261, 0.544116, 0.954427, 1.89231)
+radius = 0.623336
+material = SubResource("StandardMaterial3D_25pm4")
+
+[node name="box1" type="CSGPolygon3D" parent="."]
+transform = Transform3D(0.945512, 0, -2.98023e-08, 0, 0.999441, 0, 2.98023e-08, 0, 1.12813, 1.41316, 0.691616, -1.31525)
+polygon = PackedVector2Array(0, 0, -1.2859, 1.5119, 0.570329, 1.73271, 1, 0)
+material = SubResource("StandardMaterial3D_c1k2q")
+
+[node name="box 2" type="CSGPolygon3D" parent="."]
+transform = Transform3D(0.985871, 0, 0, 0, 1.09738, 0, 1.49012e-07, 0, 1.01742, 1.10432, 0.446651, -2.27061)
+polygon = PackedVector2Array(-0.866979, 0.142912, 0, 1, 0.783806, 1.54117, 1, 0)
+material = SubResource("StandardMaterial3D_3exjj")
+
+[node name="box 3" type="CSGPolygon3D" parent="."]
+transform = Transform3D(0.981561, 0.320964, 0.109576, -0.322717, 0.989078, 0.232379, -0.0225722, -0.183705, 1.44259, -1.43836, -0.0762446, 3.38657)
+polygon = PackedVector2Array(-0.699912, 1.38419, 0.783806, 1.54117, -1.57126, 0.824719)
+material = SubResource("StandardMaterial3D_k2qt5")
+
+[node name="box 4" type="CSGPolygon3D" parent="."]
+transform = Transform3D(0.242015, 1.02613, -0.0429128, -0.948154, 0.22271, -0.494423, -0.332493, 0.111807, 1.37869, -3.93592, -1.17871, -2.28075)
+polygon = PackedVector2Array(-3.43585, 2.42087, 0.783806, 1.54117, -2.86533, 0.988924)
+material = SubResource("StandardMaterial3D_iq632")
+script = ExtResource("2_4xf8y")
+
+[node name="box 5" type="CSGPolygon3D" parent="."]
+transform = Transform3D(0.299579, 2.87359, -0.0725506, -1.17368, 0.623681, -0.835898, -0.411578, 0.313106, 2.33089, -6.52321, -3.03504, 0.457122)
+polygon = PackedVector2Array(-1.91622, 2.02862, -1.781, 1.47066, -3.04636, 1.41351)
+material = SubResource("StandardMaterial3D_iq632")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.308752, 0.0148885, 0.951026, 0.00462466, 0.999842, -0.0171541, -0.951131, 0.00969453, 0.308635, 4.68232, 2.21243, 0.954224)
